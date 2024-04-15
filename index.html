@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Toggle CSS</title>
+        <link id="css-link" rel="stylesheet" href="./style.css" />
+    </head>
+
+    <body>
+        <header>
+            <h1>My website</h1>
+            <link id="css-link" rel="stylesheet" href="./style.css" />
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h2>Welcome to Introduction of CSS</h2>
+            <p>Use the below button to toggle between only HTML document and document with CSS applied.</p>
+            <button onclick="addCSS()" id="buton">Toggle CSS</button>
+        </main>
+        <footer>
+            <p>Copyright ©️ Ajit Garg</p>
+        </footer>
+        <script>
+            let counter = 0;
+            function addCSS() {
+                counter++;
+                const cssLink = document.getElementById("css-link");
+                if (counter % 2 !== 0) {
+                    cssLink.href = "./style.css";
+                } else {
+                    cssLink.href = "";
+                }
+            }
+        </script>
+    </body>
+</html>
